@@ -1,0 +1,63 @@
+.terrain-controls {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 999;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  min-width: 200px;
+  user-select: none;
+}
+
+.terrain-controls h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #a0cfff;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.toggle-row input[type="checkbox"] {
+  accent-color: #5b9aff;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0 4px 23px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.slider-row input[type="range"] {
+  flex: 1;
+  accent-color: #5b9aff;
+  height: 4px;
+  cursor: pointer;
+}
+
+.slider-row .value {
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: #ccc;
+}
