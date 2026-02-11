@@ -4,6 +4,7 @@ import { Cartesian3, Math as CesiumMath, IonResource } from "cesium";
 import { useEffect, useState } from "react";
 import { useTerrainOverlays } from "./useTerrainOverlays";
 import TerrainControls from "./TerrainControls";
+import DemoBuilding from "./DemoBuilding";
 
 Ion.defaultAccessToken = import.meta.env.VITE_CESIUM_ION_TOKEN;
 
@@ -26,11 +27,14 @@ function ViewerContents() {
       {/* 3D OSM Buildings — Ion asset 96188 */}
       <Cesium3DTileset url={IonResource.fromAssetId(96188)} />
 
-      {/* Fly to Washington DC on load */}
+      {/* Demo proposed building near the National Mall */}
+      <DemoBuilding />
+
+      {/* Fly to the demo building on load */}
       <CameraFlyTo
-        destination={Cartesian3.fromDegrees(-77.0369, 38.8977, 2500)}
+        destination={Cartesian3.fromDegrees(-77.036, 38.896, 500)}
         orientation={{
-          heading: CesiumMath.toRadians(10),
+          heading: CesiumMath.toRadians(350),
           pitch: CesiumMath.toRadians(-25),
           roll: 0,
         }}
